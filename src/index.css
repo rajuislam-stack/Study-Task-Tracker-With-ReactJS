@@ -1,0 +1,69 @@
+@import 'tailwindcss';
+@import url('https://googleapis.com');
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+@theme {
+  --color-body-color:#F4F2F9;
+  --color-summary-1:#EDE6FF;
+  --color-summary-2:#E6F7EF;
+  --color-summary-3:#FFF2D8;
+  --color-input-1: #F7F6FB;
+  --shadow-input-1:2px 3px 10px plum;
+  --font-poppins: 'Poppins', sans-serif;
+}
+
+
+@layer base{
+  body{
+    @apply bg-body-color flex flex-col justify-center items-center font-poppins dark:bg-gray-900 dark:text-white
+  }
+
+  p{
+  @apply text-sm leading-6  md:text-lg  md:leading-8
+  }
+
+  h1{
+    @apply text-3xl font-bold  md:text-4xl md:leading-8 dark:text-white
+  }
+}
+
+
+
+@layer components{
+  .app-style{
+    @apply bg-white rounded shadow-xl p-6 m-4 min-w-sm max-w-sm sm:min-w-md sm:max-w-md lg:min-w-2xl lg:max-w-2xl xl:min-w-4xl xl:max-w-4xl min-h-screen  flex flex-col justify-start gap-2  dark:bg-gray-800 dark:text-gray-900
+  }
+
+  .summary-card{
+    @apply bg-green-500 w-full h-full px-2 py-3 md:px-3 md:py-5 rounded
+  }
+
+  .flex-style{
+    @apply flex justify-between items-center gap-2 md:gap-4 w-full min-h-20
+  }
+
+  .input-style{
+    @apply bg-input-1 border-none rounded p-2 mt-2  w-full  h-10 md:h-12 focus:outline-none focus:shadow-input-1
+  }
+
+  .btn-style{
+    @apply bg-red-100 rounded  text-red-800  w-full py-2 md:h-12 md:w-1/2 
+  }
+
+
+  .navigation-btn-section{
+   @apply w-full flex justify-between mt-4 md:mt-1 gap-2 md:w-1/2
+  }
+
+  .navigation-btn{
+    @apply bg-body-color rounded w-full px-3 py-1 md:px-4 md:py-2  focus:bg-red-100 cursor-pointer
+  }
+
+  .task-item{
+    @apply bg-body-color flex justify-between items-center rounded px-2 
+  }
+
+
+}
