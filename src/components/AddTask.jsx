@@ -32,6 +32,14 @@ export default function AddTask({onHandleAddTask,isEmptyInput,onSetIsEmptyInput,
           setInputText(e.target.value);
 
          }}
+
+         onKeyDown={(e)=>{
+           if(e.key == 'Enter'){
+              onHandleAddTask(inputText);
+              setInputText('');
+           }
+         }}
+         
          placeholder="What will you study next?"
          ref={refInput} 
          className="input-style"

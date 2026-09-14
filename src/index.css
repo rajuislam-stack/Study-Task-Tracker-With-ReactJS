@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins...');
+
 @import 'tailwindcss';
-@import url('https://googleapis.com');
 
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -17,7 +18,7 @@
 
 @layer base{
   body{
-    @apply bg-body-color flex flex-col justify-center items-center font-poppins dark:bg-gray-900 dark:text-white
+    @apply bg-body-color w-full min-h-screen  font-poppins dark:bg-gray-900 dark:text-white
   }
 
   p{
@@ -33,7 +34,8 @@
 
 @layer components{
   .app-style{
-    @apply bg-white rounded shadow-xl p-6 m-4 min-w-sm max-w-sm sm:min-w-md sm:max-w-md lg:min-w-2xl lg:max-w-2xl xl:min-w-4xl xl:max-w-4xl min-h-screen  flex flex-col justify-start gap-2  dark:bg-gray-800 dark:text-gray-900
+     width:100% !important;
+    @apply bg-white flex flex-col justify-start gap-2  rounded shadow-xl p-6 pb-8 mx-auto my-10 min-h-150 max-w-sm sm:max-w-md md:max-w-xl lg:max-w-2xl xl:max-w-3xl  2xl:max-w-4xl  dark:bg-gray-800 dark:text-gray-900
   }
 
   .summary-card{
