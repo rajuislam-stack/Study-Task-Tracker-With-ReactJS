@@ -35,7 +35,7 @@
 @layer components{
   .app-style{
      width:100% !important;
-    @apply bg-white flex flex-col justify-start gap-2  rounded shadow-xl p-6 pb-8 mx-auto my-10 min-h-150 max-w-sm sm:max-w-md md:max-w-xl lg:max-w-2xl xl:max-w-3xl  2xl:max-w-4xl  dark:bg-gray-800 dark:text-gray-900
+    @apply bg-white flex flex-col justify-start gap-2  rounded shadow-xl p-6  mx-auto my-10 min-h-160 max-w-sm sm:max-w-xl  lg:max-w-2xl xl:max-w-3xl  2xl:max-w-4xl  dark:bg-gray-800 dark:text-gray-900
   }
 
   .summary-card{
